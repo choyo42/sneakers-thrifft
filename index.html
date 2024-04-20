@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="RhythmusByte" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sneakers thrifft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <!-- Nav Bar -->
+    
+    <header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#" style="color: red;">SNEAKERS THRIFFT</a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <a href="login.html" class="highlight">PROFILE</a>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html" class="highlight">PROFILE</a></li>
+
+            </ul>
+        </div>
+    </div>
+    </header>
+
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒
+        <span class="cart-icon-count" id="cart-icon-count">0</span>
+      </div>
+
+    <!-- Nav Bar Ends -->
+    <div class="product-container">
+        <!-- HP Laptop -->
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-08 at 10.44.38 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike SB low(clear swoosh blue)</div>
+          <div class="product-price">ksh/1000</div>
+          <button class="add-to-cart-button" onclick="addToCart('Nike SB low(clear swoosh blue)', 1000)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-08 at 10.19.53 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Jordan 1 (fragment design)</div>
+          <div class="product-price">ksh/1200</div>
+          <button class="add-to-cart-button" onclick="addToCart('Jordan 1 (fragment design)', 1200)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-08 at 10.44.08 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Puma smash platform</div>
+          <div class="product-price">ksh/1200</div>
+          <button class="add-to-cart-button" onclick="addToCart('Puma smash platform', 1200)">Add to Cart</button>
+        </div>
+      
+          <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-04 at 10.34.08 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Jordan 1 low (smoke grey)</div>
+          <div class="product-price">ksh/1200</div>
+          <button class="add-to-cart-button" onclick="addToCart('Jordan 1 low (smoke grey)', 1200)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h12.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike big swoosh reversible (fullzip jacket)</div>
+          <div class="product-price">ksh/1000</div>
+          <button class="add-to-cart-button" onclick="addToCart('nike big swoosh reversible (fullzip jacket)', 1000)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h9.jpg" alt="Product" class="product-image">
+          <div class="product-title">Houndstooth Blouson jacket</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Houndstooth Blouson jacket', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h13.jpg" alt="Product" class="product-image">
+          <div class="product-title">Shark hoodie</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Shark hoodie', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h10.jpg" alt="Product" class="product-image">
+          <div class="product-title">wool blend trench coat(grey)</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Wool blend trench coat(grey)', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 11.06.57 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Puma platform</div>
+          <div class="product-price">ksh/1200</div>
+          <button class="add-to-cart-button" onclick="addToCart('Puma platform', 1200)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 10.59.57 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike SB low (bright crimson)</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Nike SB low (bright crimson)', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 10.12.01 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike SB (Ottomo Katsuhiro)</div>
+          <div class="product-price">ksh/1500</div>
+          <button class="add-to-cart-button" onclick="addToCart('Nike SB (Ottomo Katsuhiro)', 1500)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h6.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike big swoosh reversible boa jacket</div>
+          <div class="product-price">ksh/1000</div>
+          <button class="add-to-cart-button" onclick="addToCart('nike big swoosh reversible boa jacket', 1000)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-03 at 10.18.40 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Jordan 1 Traviscot</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Jordan 1 Traviscot', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 10.09.25 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Adidas campus</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Adidas campus', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h33.jpg" alt="Product" class="product-image">
+          <div class="product-title">MAOQY College jacket</div>
+          <div class="product-price">ksh/1800</div>
+          <button class="add-to-cart-button" onclick="addToCart('MAOQY College jacket', 1800)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-04 at 10.03.48 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike SB lowdunks pro</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Nike SB lowdunks pro', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 10.54.42 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Nike SB (Ottomo Katsuhiro)</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Nike SB (Ottomo Katsuhiro)', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h1.jpg" alt="Product" class="product-image">
+          <div class="product-title">Adidas hoodie</div>
+          <div class="product-price">ksh/1000</div>
+          <button class="add-to-cart-button" onclick="addToCart('Adidas hoodie', 1000)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/WhatsApp Image 2024-04-05 at 10.04.40 AM.jpg" alt="Product" class="product-image">
+          <div class="product-title">Adidas Yeezy 700(grey)</div>
+          <div class="product-price">ksh/1250</div>
+          <button class="add-to-cart-button" onclick="addToCart('Adidas Yeezy 700(grey)', 1250)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h10.jpg" alt="Product" class="product-image">
+          <div class="product-title">Jordan 1 lowcut (dior)</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Jordan 1 lowcut (dior)', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h8.jpg" alt="Product" class="product-image">
+          <div class="product-title">ADLV babyface hoodie(donut)</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('ADLV babyface hoodie(donut)', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h4.jpg" alt="Product" class="product-image">
+          <div class="product-title">Bape shark summer</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Bape shark summer', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h77.jpg" alt="Product" class="product-image">
+          <div class="product-title">ADLV babyface hoodie</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('ADLV babyface hoodie', 1400)">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="SHOES PICTURES/h5.jpg" alt="Product" class="product-image">
+          <div class="product-title">Hoodie Vlone</div>
+          <div class="product-price">ksh/1400</div>
+          <button class="add-to-cart-button" onclick="addToCart('Hoodie Vlone', 1400)">Add to Cart</button>
+        </div>
+      
+        <!-- Add more product cards here -->
+      </div>
+    <!-- Cart details modal -->
+    <div class="cart-details" id="cart-details">
+    <h3>PRODUCT DETAILS</h3>
+    <table id="cart-items" class="cart-items">
+      <thead>
+        <tr>
+          <th>PRODUCT</th>
+          <th>PRICE</th>
+          <th>Q</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items-body"></tbody>
+    </table>
+    <hr>
+    <div class="cart-total">Total: ksh/<span id="cart-total">0.00</span></div>
+    <button class="pay-button" onclick="pay()">Pay Now</button>
+    <button class="back-to-main" onclick="toggleCart()">Close</button>
+  </div>
+  
+  <!-- Details modal -->
+  <div class="details-modal" id="details-modal">
+    <span class="modal-close" onclick="hideDetails()">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <p id="modal-price"></p>
+    <button class="add-to-cart-button" onclick="addToCart(modalTitle, modalPrice)">Add to Cart</button>
+  </div>
+  
+  <!-- WhatsApp icon button -->
+  <div class="whatsapp-icon" onclick="openWhatsApp()">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+    <script src="index.js"></script>
+         <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+          &copy; 2024 SNEAKERS THRIFFT. All Rights Reserved. | 
+          <p>created by Chol Abraham</p>
+          <a href="#">Privacy Policy</a> | 
+          <a href="">Terms of Service</a>
+        </div>
+      
+        <!-- MPESA Details -->
+        <div class="mpesa-details">
+          <h4>LIPA NA MPESA</h4>
+          <p style="color: red;">Paybill Number: <p style="color: black;">573573</p></p>
+          <p style="color: red;">Account Number: <p style="color: black;">0750839527</p></p>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:abrahamchol463@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div> 
+</body>
+</html>

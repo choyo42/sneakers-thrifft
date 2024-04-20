@@ -1,0 +1,568 @@
+/* Body */
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+/* Nav Bar */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: red;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black; /* Add background color for better visibility */
+    z-index: 1000; /* Ensure navbar stays on top of other elements */
+}
+
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.navbar .menu {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .highlight {
+    display: block;
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+.highlight {
+    background-color: red;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.highlight:hover {
+    transform: scale(1.05);
+    color: #000;
+}
+
+.highlight:active {
+    transform: scale(0.95);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    z-index: 999; /* Ensure dropdown appears above other elements */
+    width: 250px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .highlight {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open {
+    height: 325px;
+    width: 100%;
+    max-width: 100%;
+    left: 0; 
+    right: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/* Nav Bar Ends */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    animation: slide-in 0.5s ease-in-out;
+  }
+  .product-card {
+    position: relative;
+    width: calc(25% - 10px); /* Two columns per row by default */
+    margin: 0 5px 20px 5px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+  }
+  .product-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-price {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-image {
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .add-to-cart-button {
+    margin-top: auto;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.cart-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    font-size: 30px;
+    color: #007bff;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .cart-icon-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .cart-details {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+ 
+  .details-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .pay-button{
+    background-color: rgb(16, 202, 62);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .back-to-main {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .container {
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #ff4500;
+  }
+  .containerr {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: red;
+  }
+  h3 {
+    color: red;
+    text-align: center;
+  }
+  p {
+    color: beige;
+    line-height: 1.6;
+  }
+  
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 46%;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .whatsapp-icon:hover {
+    background-color: #128c7e;
+  }
+  
+  .footer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    flex-grow: 1;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .mpesa-details {
+    margin-left: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+    border: 1px solid #4CAF50;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .mpesa-details h4 {
+    color: #009933;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .mpesa-details p {
+    margin: 0;
+  }
+  
+  .mpesa-details p span {
+    color: red;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+  }
+  
+  .social-icons a {
+    color: #ccc;
+    font-size: 20px;
+    margin: 0 9px;
+  }
+  
+  .social-icons a:hover {
+    color: red;
+  }
+  
+  .email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .email-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .mpesa-details:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+/* Responsive */
+
+.container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8em;
+  }
+  .contact-section {
+    padding: 50px 0;
+    background-color: black;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 90px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1px;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    border-radius: 5px;
+    background-color: #007bff;
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 992px) {
+    .navbar .nav ul {
+        display: none;
+    }
+    
+    .navbar .menu {
+        display: flex;
+    }
+    
+    .navbar .menu i {
+        display: inline-block;
+    }
+    
+    .navbar .highlight {
+        display: none;
+    }
+    
+    .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu .highlight {
+        display: block;
+        margin-top: 1rem;
+    }
+    .product-container {
+        justify-content: center; /* Center products on smaller screens */
+      }
+      .product-card {
+        width: calc(25% - 10px); /* Four columns per row for larger screens */
+      }
+    }
+    @media (max-width: 768px) {
+        .product-card {
+          width: calc(50% - 10px); /* Two columns per row for smaller screens */
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 50%;
+        }
+      }
+      
+      @media screen and (max-width: 400px) {
+        .container {
+          width: 70%;
+        }
+      }
+      
