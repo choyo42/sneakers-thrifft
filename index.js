@@ -211,3 +211,13 @@ function isValidEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+ // Function to open WhatsApp
+  function openWhatsApp() {
+    // Change this number to your country code
+    var countryCode = "254";
+    // Change this number to the recipient's phone number
+    var phoneNumber = "0724406921";
+    // Open WhatsApp with the provided phone number
+    window.open("https://wa.me/" + countryCode + phoneNumber, "_blank");
+  }
